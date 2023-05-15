@@ -16,4 +16,6 @@ There are two python files of note:
 
 Here is how to run them:
 1. First launch the sewrver: **python3 app.py**
-1. Run the code for client: **python3 leanspace.py**
+1. Run the code for client: **python3 leanspace.py [csv filename]**
+	1. Good data: **python3 leanspace.py leanspace.title.csv**
+	1. Bad data:  **python3 leanspace.py leanspace.bad.csv**

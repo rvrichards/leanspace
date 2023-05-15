@@ -1,9 +1,11 @@
 import csv
+import sys
 import json
 import requests
 
 api_url = 'http://127.0.0.1:5000/api/endpoint666'
-csv_file_path = 'leanspace.title.csv'
+# filename = 'leanspace.title.csv'
+# filename = 'leanspace.bad.csv'
 
 def send_api_request(payload):
     print("Payload: ", json.dumps(payload, indent=3) )
@@ -32,5 +34,10 @@ def process_csv_file(csv_file, api_url):
     for payload in payloads:
         send_api_request(payload)
 
-# Fire this thing up
-process_csv_file(csv_file_path, api_url)
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print("Please provide the csv filename as an argument.")
+    else:
+        filename = sys.argv[1]
+        process_csv_file(filename, api_url)

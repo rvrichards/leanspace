@@ -19,7 +19,7 @@ def handle_post_request():
 
         # Validate the required fields in the data
         if 'userID' not in data or 'sensorID' not in data:
-            return jsonify({'error': 'Missing required fields'}), 400
+            return jsonify({'error': 'Missing required fields (userID or sensorID)'}), 400
 
         # Process the data as per your requirements
         print(data)

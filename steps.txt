@@ -13,3 +13,7 @@ Steps to run Python code to submit a REST API call and a server to reply.
 	- also factor out api_url so its not in function parameter list
 	- validation added.
 	- success and its working. Second commit.
+8. Create a csv file with bad data: leanspace.bad.csv
+9. Change leanspace.py to pass in a csv file so we can easily test different csv files.
+10. Commit these changes. 3rd commit.
+
