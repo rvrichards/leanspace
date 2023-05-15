@@ -1,0 +1,10 @@
+Steps to run Python code to submit a REST API call and a server to reply.
+
+1. Create a local directory: leanspace.
+2. Will need a test api server, using Flask: app.py
+	- Server: localhost:5000
+	- Endpoint: /api/endpoint666
+3. Create a test csv file: leanspace.csv
+4. Create a test Python file to submit REST api calls: leanspace.py
+5. First coding - simple generic submit and reply code.
+	- success, initial commit.
