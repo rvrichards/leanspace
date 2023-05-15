@@ -8,3 +8,8 @@ Steps to run Python code to submit a REST API call and a server to reply.
 4. Create a test Python file to submit REST api calls: leanspace.py
 5. First coding - simple generic submit and reply code.
 	- success, initial commit.
+6. Add try-catch for errors.
+7. Adding validation - found problems with my payload JSON, it's not correct, need to use column titles.
+	- also factor out api_url so its not in function parameter list
+	- validation added.
+	- success and its working. Second commit.
