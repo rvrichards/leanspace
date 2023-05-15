@@ -16,4 +16,6 @@ Steps to run Python code to submit a REST API call and a server to reply.
 8. Create a csv file with bad data: leanspace.bad.csv
 9. Change leanspace.py to pass in a csv file so we can easily test different csv files.
 10. Commit these changes. 3rd commit.
-
+11. Added api_key. This is for testing only, api is hard coded. Typically you want something more production friendly, using ENV or a secret file or Kubernetes. 
+12. The "server" code is needing some cleaning up - but this exercise was only to read a csv file and submit to server. So the server code is just for me to run and test and see if it is working.
+13. Committed code, it runs successfully from my limited tests. 

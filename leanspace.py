@@ -3,13 +3,23 @@ import sys
 import json
 import requests
 
+api_key = 'JamesBond007'  # This is a valid key
+api_not = 'NotAValidKey'  # This is a NOT a valid key
 api_url = 'http://127.0.0.1:5000/api/endpoint666'
 # filename = 'leanspace.title.csv'
 # filename = 'leanspace.bad.csv'
 
+headers = {
+    # 'Authorization': f'Bearer {api_not}',
+    'Authorization': f'Bearer {api_key}',
+    'Content-Type': 'application/json'
+    # etc
+}
+
 def send_api_request(payload):
     print("Payload: ", json.dumps(payload, indent=3) )
-    response = requests.post(api_url, json=payload)
+    print("Headers:", headers)
+    response = requests.post(api_url, headers=headers, json=payload)
 
     # Check API responses
     if response.status_code == 200:
@@ -18,6 +28,7 @@ def send_api_request(payload):
     else:
         print('API request fail')
         print(response.status_code, response.text)
+        # print(response.status_code)
 
 
 def process_csv_file(csv_file, api_url):
